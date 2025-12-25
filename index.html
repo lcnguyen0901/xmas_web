@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 2025 Story ❄️ A Christmas Memory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Audio Player -->
+    <audio id="bgMusic" loop>
+        <source src="all-i-want-for-christmas-is-you-official-video.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Snow Canvas -->
+    <canvas id="snowCanvas"></canvas>
+
+    <!-- Music Control -->
+    <button id="musicToggle" class="music-btn" title="Toggle Music">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- Landing Page -->
+    <section id="landing" class="active">
+        <!-- Side Decorations - Landing -->
+        <div class="side-decor left">
+            <span class="decor-item" style="top: 10%">🎄</span>
+            <span class="decor-item" style="top: 30%">⭐</span>
+            <span class="decor-item" style="top: 50%">🎁</span>
+            <span class="decor-item" style="top: 70%">🔔</span>
+            <span class="decor-item" style="top: 90%">❄️</span>
+        </div>
+        <div class="side-decor right">
+            <span class="decor-item" style="top: 15%">✨</span>
+            <span class="decor-item" style="top: 35%">🎅</span>
+            <span class="decor-item" style="top: 55%">🦌</span>
+            <span class="decor-item" style="top: 75%">🎄</span>
+            <span class="decor-item" style="top: 95%">⭐</span>
+        </div>
+        <div class="ornament ornament-1">🎄</div>
+        <div class="ornament ornament-2">⭐</div>
+        <div class="ornament ornament-3">🎁</div>
+        <div class="landing-content">
+            <div class="title-wrapper">
+                <h1 class="main-title">Our First Date</h1>
+                <p class="subtitle">A Christmas Story of 2025</p>
+                <div class="decorative-line">❄️ ❄️ ❄️</div>
+            </div>
+            <p class="intro-text">
+                Every story has a beginning, and ours is my favorite.<br>
+                Let me take you through the moments that made us... <em>us</em>.
+            </p>
+            <button class="nav-btn glow-btn" onclick="goToSection('preparation')">
+                Begin Our Journey
+                <span class="arrow">→</span>
+            </button>
+        </div>
+        <div class="scroll-hint">
+            <span>Click to start</span>
+            <div class="bounce-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Preparation Section -->
+    <section id="preparation">
+        <!-- Side Decorations - Preparation -->
+        <div class="side-decor left">
+            <span class="decor-item" style="top: 8%">🕯️</span>
+            <span class="decor-item" style="top: 28%">🎀</span>
+            <span class="decor-item" style="top: 48%">🧦</span>
+            <span class="decor-item" style="top: 68%">🎄</span>
+            <span class="decor-item" style="top: 88%">✨</span>
+        </div>
+        <div class="side-decor right">
+            <span class="decor-item" style="top: 12%">🎁</span>
+            <span class="decor-item" style="top: 32%">❄️</span>
+            <span class="decor-item" style="top: 52%">🔔</span>
+            <span class="decor-item" style="top: 72%">🌟</span>
+            <span class="decor-item" style="top: 92%">🎀</span>
+        </div>
+        <div class="section-header">
+            <span class="chapter-num">Chapter I</span>
+            <h2>The Preparation</h2>
+            <p class="chapter-subtitle">Getting ready for the most special day</p>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="story-text">
+                <p>
+                    I spent an entire week preparing something special for you — 
+                    a Christmas handmade gift card, crafted with all my heart. 
+                    It was my very first time making one, and I wanted it to be perfect. 
+                    Every fold, every decoration, every word I wrote... I put so much care into it.
+                </p>
+            </div>
+
+            <div class="gallery-container">
+                <div class="photo-frame" id="prep-photo-1">
+                    <div class="photo-placeholder">
+                        <span class="placeholder-icon">📸</span>
+                        <span class="placeholder-text">Click to reveal</span>
+                    </div>
+                    <img src="" alt="Preparation moment 1" class="hidden">
+                    <div class="photo-caption">Starting my first handmade card...</div>
+                </div>
+                
+                <div class="photo-frame" id="prep-photo-2">
+                    <div class="photo-placeholder">
+                        <span class="placeholder-icon">📸</span>
+                        <span class="placeholder-text">Click to reveal</span>
+                    </div>
+                    <img src="" alt="Preparation moment 2" class="hidden">
+                    <div class="photo-caption">Putting in the details</div>
+                </div>
+
+                <div class="photo-frame" id="prep-photo-3">
+                    <div class="photo-placeholder">
+                        <span class="placeholder-icon">📸</span>
+                        <span class="placeholder-text">Click to reveal</span>
+                    </div>
+                    <img src="" alt="Preparation moment 3" class="hidden">
+                    <div class="photo-caption">The finished gift card!</div>
+                </div>
+            </div>
+
+            <div class="memory-note">
+                <span class="note-icon">💭</span>
+                <p>"It was my first time making a handmade gift card. I tried my absolute best because you deserve nothing less."</p>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn secondary" onclick="goToSection('landing')">← Back</button>
+            <button class="nav-btn primary" onclick="goToSection('thedate')">The Date →</button>
+        </div>
+    </section>
+
+    <!-- The Date Section -->
+    <section id="thedate">
+        <!-- Side Decorations - The Date -->
+        <div class="side-decor left">
+            <span class="decor-item" style="top: 5%">🎅</span>
+            <span class="decor-item" style="top: 20%">🌲</span>
+            <span class="decor-item" style="top: 35%">⛄</span>
+            <span class="decor-item" style="top: 50%">🎄</span>
+            <span class="decor-item" style="top: 65%">🦌</span>
+            <span class="decor-item" style="top: 80%">🎁</span>
+            <span class="decor-item" style="top: 95%">✨</span>
+        </div>
+        <div class="side-decor right">
+            <span class="decor-item" style="top: 10%">👼</span>
+            <span class="decor-item" style="top: 25%">🔔</span>
+            <span class="decor-item" style="top: 40%">🍪</span>
+            <span class="decor-item" style="top: 55%">🥛</span>
+            <span class="decor-item" style="top: 70%">❄️</span>
+            <span class="decor-item" style="top: 85%">⭐</span>
+        </div>
+        <div class="section-header">
+            <span class="chapter-num">Chapter II</span>
+            <h2>The Date</h2>
+            <p class="chapter-subtitle">A day full of creativity, food, and wandering</p>
+        </div>
+        
+        <div class="content-wrapper date-content">
+            <!-- Workshop Tô Dĩa -->
+            <div class="date-segment">
+                <div class="segment-header">
+                    <span class="segment-icon">🎨</span>
+                    <h3>Workshop Tô Dĩa</h3>
+                </div>
+                <div class="story-text">
+                    <p>
+                        We started our date at this super cute workshop — Tô Dĩa. 
+                        The atmosphere was so cozy and creative! We spent time together 
+                        brainstorming ideas for our designs. In the end, we went with 
+                        something simple but still took our time to carefully color everything.
+                    </p>
+                </div>
+
+                <div class="workshop-gallery">
+                    <div class="workshop-photos-large">
+                        <div class="photo-frame" id="workshop-photo-1">
+                            <div class="photo-placeholder">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Click to reveal</span>
+                            </div>
+                            <img src="" alt="Workshop atmosphere" class="hidden">
+                            <div class="photo-caption">The cute workshop atmosphere</div>
+                        </div>
+                        <div class="photo-frame" id="workshop-photo-2">
+                            <div class="photo-placeholder">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Click to reveal</span>
+                            </div>
+                            <img src="" alt="Workshop atmosphere" class="hidden">
+                            <div class="photo-caption">Getting creative together</div>
+                        </div>
+                        <div class="photo-frame" id="workshop-photo-3">
+                            <div class="photo-placeholder">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Click to reveal</span>
+                            </div>
+                            <img src="" alt="Workshop atmosphere" class="hidden">
+                            <div class="photo-caption">Our creative space</div>
+                        </div>
+                    </div>
+
+                    <div class="video-container" id="timelapse-container">
+                        <div class="video-placeholder" id="video-placeholder">
+                            <span class="placeholder-icon">🎬</span>
+                            <span class="placeholder-text">Click to watch our timelapse</span>
+                        </div>
+                        <video id="timelapse-video" class="hidden" muted playsinline>
+                            <source src="image_asset/7.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">Our creative process ✨</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sushi Restaurant -->
+            <div class="date-segment">
+                <div class="segment-header">
+                    <span class="segment-icon">🍣</span>
+                    <h3>Sushi Time!</h3>
+                </div>
+                <div class="story-text">
+                    <p>
+                        After spending so much time at the workshop, we were both starving! 
+                        We headed to a cozy sushi restaurant and devoured everything. 
+                        No pictures here — we were too busy eating and chatting! 
+                        The food was amazing, but the conversation and the atmosphere 
+                        with you made it even better.
+                    </p>
+                </div>
+                <div class="no-photo-note">
+                    <span>🍱</span>
+                    <p><em>Too busy enjoying our meal and each other's company to take photos!</em></p>
+                </div>
+            </div>
+
+            <!-- Walking Around -->
+            <div class="date-segment">
+                <div class="segment-header">
+                    <span class="segment-icon">🚶</span>
+                    <h3>Walking Through the City</h3>
+                </div>
+                <div class="story-text">
+                    <p>
+                        With full stomachs and happy hearts, we took a lovely walk 
+                        around some famous spots — Nhà thờ Đức Bà and phố đi bộ. 
+                        The Christmas lights were everywhere, and being with you 
+                        made everything feel magical.
+                    </p>
+                </div>
+
+                <div class="walking-gallery">
+                    <div class="photo-frame" id="walking-photo-1">
+                        <div class="photo-placeholder">
+                            <span class="placeholder-icon">🎨</span>
+                            <span class="placeholder-text">Click to reveal</span>
+                        </div>
+                        <img src="" alt="Our artwork front" class="hidden">
+                        <div class="photo-caption">Our artwork - Front side</div>
+                    </div>
+                    <div class="photo-frame" id="walking-photo-2">
+                        <div class="photo-placeholder">
+                            <span class="placeholder-icon">🎨</span>
+                            <span class="placeholder-text">Click to reveal</span>
+                        </div>
+                        <img src="" alt="Our artwork back" class="hidden">
+                        <div class="photo-caption">Our artwork - Back side</div>
+                    </div>
+                    <div class="photo-frame featured" id="walking-photo-3">
+                        <div class="photo-placeholder">
+                            <span class="placeholder-icon">📸</span>
+                            <span class="placeholder-text">Click to reveal</span>
+                        </div>
+                        <img src="" alt="Our cute picture" class="hidden">
+                        <div class="photo-caption">Us! 💕</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memory-note highlight">
+                <span class="note-icon">✨</span>
+                <p>"This was the day I realized how much I enjoy spending time with you."</p>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn secondary" onclick="goToSection('preparation')">← Preparation</button>
+            <button class="nav-btn primary" onclick="goToSection('after')">After The Date →</button>
+        </div>
+    </section>
+
+    <!-- After The Date Section -->
+    <section id="after">
+        <!-- Side Decorations - After The Date -->
+        <div class="side-decor left">
+            <span class="decor-item" style="top: 5%">🎄</span>
+            <span class="decor-item" style="top: 18%">🎀</span>
+            <span class="decor-item" style="top: 31%">🕯️</span>
+            <span class="decor-item" style="top: 44%">🎁</span>
+            <span class="decor-item" style="top: 57%">🧣</span>
+            <span class="decor-item" style="top: 70%">⛄</span>
+            <span class="decor-item" style="top: 83%">✨</span>
+            <span class="decor-item" style="top: 96%">❄️</span>
+        </div>
+        <div class="side-decor right">
+            <span class="decor-item" style="top: 8%">🌟</span>
+            <span class="decor-item" style="top: 21%">🔔</span>
+            <span class="decor-item" style="top: 34%">🎅</span>
+            <span class="decor-item" style="top: 47%">🎄</span>
+            <span class="decor-item" style="top: 60%">🦌</span>
+            <span class="decor-item" style="top: 73%">🎁</span>
+            <span class="decor-item" style="top: 86%">⭐</span>
+        </div>
+        <div class="section-header">
+            <span class="chapter-num">Chapter III</span>
+            <h2>After The Date</h2>
+            <p class="chapter-subtitle">A little surprise awaits...</p>
+        </div>
+        
+        <div class="content-wrapper after-content">
+            <div class="story-text intro-mystery">
+                <p>
+                    The date ended, but the memories stayed with me forever. 
+                    But wait... I have some fun challenges for you! 🎁
+                </p>
+                <p class="mystery-text">
+                    ✨ Answer correctly to unlock special surprises... ✨
+                </p>
+            </div>
+
+            <!-- Quiz 1: Signature Icons -->
+            <div class="quiz-container" id="quiz-1">
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🤭</span>
+                        <h4>Quiz #1</h4>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="quiz-intro">Wanna know how <strong>Cát Tiên</strong> looked after the date? 👀✨</p>
+                        <p>What are the signature icons of <strong>Cát Tiên</strong>?</p>
+                        <p class="quiz-hint">(Select TWO correct answers)</p>
+                    </div>
+                    
+                    <div class="quiz-options" id="quiz-1-options">
+                        <!-- Options will be randomized by JavaScript -->
+                    </div>
+
+                    <button class="submit-quiz-btn" onclick="submitQuiz1()">
+                        Submit Answer
+                    </button>
+
+                    <div class="quiz-feedback" id="quiz-1-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Reward 1: Instagram Photo -->
+            <div class="reward-section hidden" id="reward-section-1">
+                <div class="reward-reveal" id="reward-reveal-1">
+                    <div class="confetti-burst">🎉</div>
+                    <h4>You know about Cát Tiên so well! 💅✨</h4>
+                </div>
+                
+                <div class="reward-card instagram-reward">
+                    <div class="instagram-decorations">
+                        <span class="deco-nail">💅</span>
+                        <span class="deco-spark">✨</span>
+                        <span class="deco-nail">💅</span>
+                        <span class="deco-spark">✨</span>
+                    </div>
+                    <img src="image_asset/11.jpg" alt="Her Instagram post" class="reward-card-image">
+                    <div class="instagram-caption">Her Instagram Story 💫</div>
+                </div>
+
+                <div class="memory-note special">
+                    <span class="note-icon">💭</span>
+                    <p>
+                        When I saw this on her Instagram story, my heart melted. 
+                        She looked so cute! I was so happy that she shared our moment. 
+                        At 23, she's the most beautiful person I've ever met, 
+                        and I'm so glad this day happened.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quiz 2: First Date -->
+            <div class="quiz-container hidden" id="quiz-2">
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📅</span>
+                        <h4>Quiz #2</h4>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="quiz-intro">Want to know how Nguyên feeling about the date with you? 🥰💭</p>
+                        <p>When did we have our <strong>first date</strong>?</p>
+                    </div>
+                    
+                    <div class="date-picker-container">
+                        <input type="date" id="date-picker-1" class="date-picker">
+                    </div>
+
+                    <button class="submit-quiz-btn" onclick="submitQuiz2()">
+                        Submit Answer
+                    </button>
+
+                    <div class="quiz-feedback" id="quiz-2-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Reward 2: Photo 12 -->
+            <div class="reward-section hidden" id="reward-section-2">
+                <div class="reward-reveal" id="reward-reveal-2">
+                    <div class="confetti-burst">🎉</div>
+                    <h4>You remembered! That day was magical! 💫</h4>
+                </div>
+                
+                <div class="reward-card">
+                    <img src="image_asset/12.jpg" alt="Our special moment" class="reward-card-image">
+                </div>
+            </div>
+
+            <!-- Quiz 3: Birthday -->
+            <div class="quiz-container hidden" id="quiz-3">
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🎂</span>
+                        <h4>Quiz #3</h4>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="quiz-intro">Want to know the vibe Nguyên promise with you in the afternoon? 🌅✨</p>
+                        <p>When is the birthday of <strong>Công Nguyên</strong>?</p>
+                    </div>
+                    
+                    <div class="date-picker-container">
+                        <input type="date" id="date-picker-2" class="date-picker">
+                    </div>
+
+                    <button class="submit-quiz-btn" onclick="submitQuiz3()">
+                        Submit Answer
+                    </button>
+
+                    <div class="quiz-feedback" id="quiz-3-feedback"></div>
+                </div>
+            </div>
+
+            <!-- Reward 3: Video 13 -->
+            <div class="reward-section hidden" id="reward-section-3">
+                <div class="reward-reveal" id="reward-reveal-3">
+                    <div class="confetti-burst">🎉</div>
+                    <h4>You're amazing! Here's a special gift! 🎄</h4>
+                </div>
+                
+                <div class="reward-card video-reward">
+                    <div class="garland-border-small">
+                        <div class="garland-corner tl">🎄</div>
+                        <div class="garland-corner tr">⭐</div>
+                        <div class="garland-corner bl">⭐</div>
+                        <div class="garland-corner br">🎄</div>
+                        <video id="birthday-video" controls class="reward-card-video">
+                            <source src="image_asset/13.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Gifts Section -->
+            <div class="our-gifts-section hidden" id="our-gifts-section">
+                <div class="gifts-header">
+                    <span class="gifts-icon">🎁</span>
+                    <h3>Our Gifts</h3>
+                    <p class="gifts-subtitle">The sweetest exchange 💕</p>
+                </div>
+
+                <!-- My Gift to Her -->
+                <div class="gift-item">
+                    <div class="gift-label">
+                        <span>💐</span>
+                        <h4>My Gift to You</h4>
+                    </div>
+                    <div class="gift-card" id="gift-14">
+                        <div class="photo-placeholder">
+                            <span class="placeholder-icon">🌸</span>
+                            <span class="placeholder-text">Click to reveal</span>
+                        </div>
+                        <img src="" alt="My gift - Flowers" class="hidden">
+                    </div>
+                    <div class="gift-story">
+                        <p>
+                            A week before our date, I scrolled through all your TikToks 
+                            trying to guess your favorite color 🎨 I noticed you loved 
+                            soft, dreamy vibes so I picked flowers in <strong>light blue</strong> 
+                            with a <strong>white background</strong> and some 
+                            <strong>light pink</strong> blooms. 
+                        </p>
+                        <p class="gift-note">
+                            It really matched your vibe on the date! 😊💐
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Her Gift to Me -->
+                <div class="gift-item">
+                    <div class="gift-label">
+                        <span>🎁</span>
+                        <h4>Your Gift to Me</h4>
+                    </div>
+                    <div class="gift-card" id="gift-15">
+                        <div class="photo-placeholder">
+                            <span class="placeholder-icon">✨</span>
+                            <span class="placeholder-text">Click to reveal</span>
+                        </div>
+                        <img src="" alt="Her gift from Indonesia" class="hidden">
+                    </div>
+                    <div class="gift-story">
+                        <p>
+                            This gift came from your business trip to <strong>Indonesia</strong> 🇮🇩 — 
+                            your first abroad trip! A result of all your effort and hard work 
+                            through your journey. I'm so proud of you! 
+                        </p>
+                        <p class="gift-note">
+                            To be honest, I was so nervous during the week before meeting you 
+                            that I didn't expect any gift at all! 😅 So when you gave me this, 
+                            I was completely surprised and so happy! 🥹💕
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn secondary" onclick="goToSection('thedate')">← The Date</button>
+            <button class="nav-btn primary" onclick="goToSection('finale')">Our Story →</button>
+        </div>
+    </section>
+
+    <!-- Finale Section -->
+    <section id="finale">
+        <!-- Side Decorations - Finale -->
+        <div class="side-decor left">
+            <span class="decor-item" style="top: 10%">💝</span>
+            <span class="decor-item" style="top: 30%">🎄</span>
+            <span class="decor-item" style="top: 50%">👼</span>
+            <span class="decor-item" style="top: 70%">🌟</span>
+            <span class="decor-item" style="top: 90%">💖</span>
+        </div>
+        <div class="side-decor right">
+            <span class="decor-item" style="top: 15%">🎁</span>
+            <span class="decor-item" style="top: 35%">✨</span>
+            <span class="decor-item" style="top: 55%">🕯️</span>
+            <span class="decor-item" style="top: 75%">🎄</span>
+            <span class="decor-item" style="top: 95%">💕</span>
+        </div>
+        <div class="finale-content">
+            <div class="heart-container">
+                <div class="floating-hearts">
+                    <span>❤️</span><span>💕</span><span>❤️</span>
+                    <span>💕</span><span>❤️</span><span>💕</span>
+                </div>
+            </div>
+            
+            <h2 class="finale-title">To My Dearest Cát Tiên</h2>
+            
+            <div class="love-letter">
+                <p>
+                    Looking back at our first date fills my heart with so much warmth.
+                </p>
+                <p>
+                    That day was something special. You came into my world 
+                    and made everything brighter, more colorful, more fun.
+                </p>
+                <p>
+                    Thank you for being you. Thank you for every smile, 
+                    every laugh, every moment we've shared together.
+                </p>
+                <p class="signature">
+                    Thinking of you always,<br>
+                    <span class="heart-sig">♥</span>
+                </p>
+            </div>
+
+            <div class="christmas-wish-section">
+                <p class="wish-intro">🎄 One more surprise awaits... 🎄</p>
+                <button class="nav-btn glow-btn" onclick="goToSection('christmas-gift')">
+                    Open Your Christmas Gift
+                    <span class="arrow">🎁</span>
+                </button>
+            </div>
+
+            <button class="nav-btn secondary" onclick="location.reload()">
+                Relive Our Memory Again
+            </button>
+        </div>
+    </section>
+
+    <!-- Christmas Gift Section -->
+    <section id="christmas-gift">
+        <!-- Side Decorations - Christmas Gift -->
+        <div class="side-decor left">
+            <span class="decor-item" style="top: 10%">🎁</span>
+            <span class="decor-item" style="top: 25%">🎄</span>
+            <span class="decor-item" style="top: 40%">🎀</span>
+            <span class="decor-item" style="top: 55%">✨</span>
+            <span class="decor-item" style="top: 70%">🎅</span>
+            <span class="decor-item" style="top: 85%">🌟</span>
+        </div>
+        <div class="side-decor right">
+            <span class="decor-item" style="top: 15%">🎁</span>
+            <span class="decor-item" style="top: 30%">🔔</span>
+            <span class="decor-item" style="top: 45%">❄️</span>
+            <span class="decor-item" style="top: 60%">🎄</span>
+            <span class="decor-item" style="top: 75%">⭐</span>
+            <span class="decor-item" style="top: 90%">🎁</span>
+        </div>
+        <div class="gift-scene">
+            <!-- Gift Box -->
+            <div class="gift-box-container" id="gift-box" onclick="openGiftBox()">
+                <div class="gift-box">
+                    <div class="gift-lid">
+                        <div class="gift-bow">🎀</div>
+                    </div>
+                    <div class="gift-body">
+                        <div class="gift-ribbon-v"></div>
+                        <div class="gift-ribbon-h"></div>
+                    </div>
+                </div>
+                <p class="gift-hint">✨ Tap to open! ✨</p>
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown-overlay hidden" id="countdown-overlay">
+                <div class="countdown-number" id="countdown-number">3</div>
+            </div>
+
+            <!-- Confetti Container -->
+            <div class="confetti-container hidden" id="confetti-container"></div>
+
+            <!-- Christmas Letter -->
+            <div class="christmas-letter-container hidden" id="christmas-letter">
+                <div class="letter-envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="letter-content">
+                        <div class="letter-header">
+                            <span class="letter-decoration">🎄</span>
+                            <span class="letter-decoration">⭐</span>
+                            <span class="letter-decoration">🎄</span>
+                        </div>
+                        <div class="letter-body">
+                            <p class="letter-greeting">Dear Cát Tiên,</p>
+                            <p>
+                                Thank you for choosing to match me, spending your quality time, 
+                                trust and sharing your life with me.
+                            </p>
+                            <p>
+                                In our first date, I felt so lucky to have a chance to meet you 
+                                and I appreciate every moment with you.
+                            </p>
+                            <p>
+                                I really hope that we will have another date so that I can confess 
+                                these words from the bottom of my heart.
+                            </p>
+                            <p class="letter-closing">
+                                Merry Christmas 2025! 🎄<br>
+                                <span class="letter-signature">With all my heart,</span><br>
+                                <span class="letter-name">Công Nguyên ❤️</span>
+                            </p>
+                        </div>
+                        <div class="letter-footer">
+                            <span>❄️</span><span>🎁</span><span>❄️</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center-button">
+                    <button class="nav-btn glow-btn" onclick="location.reload()">
+                        Start Our Journey Again 💕
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
