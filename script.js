@@ -779,6 +779,112 @@ function preloadImages() {
 window.addEventListener('load', preloadImages);
 
 // ============================================
+// Secret Quiz - Cát Tiên's Birthday
+// ============================================
+function showSecretQuiz() {
+    const secretQuiz = document.getElementById('secret-quiz');
+    const secretBtn = document.getElementById('secret-gift-btn');
+    
+    if (secretQuiz.classList.contains('hidden')) {
+        secretQuiz.classList.remove('hidden');
+        secretQuiz.classList.add('reveal');
+        secretBtn.classList.add('activated');
+        
+        // Scroll to quiz
+        setTimeout(() => {
+            secretQuiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+        
+        createSparkles(secretBtn);
+    }
+}
+
+function submitSecretQuiz() {
+    const feedback = document.getElementById('secret-quiz-feedback');
+    const datePicker = document.getElementById('secret-date-picker');
+    const selectedDate = datePicker.value;
+    
+    if (!selectedDate) {
+        feedback.textContent = 'Please select a date! 🎂';
+        feedback.className = 'quiz-feedback error';
+        shakeElement(document.querySelector('.secret-quiz-card'));
+        return;
+    }
+    
+    // Extract month and day only (ignore year for birthday)
+    const selected = new Date(selectedDate);
+    const selectedMonth = selected.getMonth() + 1; // 0-indexed
+    const selectedDay = selected.getDate();
+    
+    // Cát Tiên's birthday: February 1, 2003
+    const correctMonth = 2; // February
+    const correctDay = 1;   // 1st
+    
+    // Check if month and day match (any year)
+    const isCorrect = selectedMonth === correctMonth && selectedDay === correctDay;
+    
+    if (isCorrect) {
+        feedback.textContent = 'Correct! Here\'s her reaction! 🎉💕';
+        feedback.className = 'quiz-feedback success';
+        
+        setTimeout(() => {
+            const quizContainer = document.getElementById('secret-quiz');
+            const rewardSection = document.getElementById('secret-reward');
+            const rewardReveal = document.getElementById('secret-reward-reveal');
+            
+            quizContainer.classList.add('completed');
+            rewardSection.classList.remove('hidden');
+            rewardSection.classList.add('reveal');
+            
+            // Initialize reaction video music pause
+            initReactionVideo();
+            
+            setTimeout(() => {
+                rewardReveal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+            
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => createSparkles(rewardReveal), i * 200);
+            }
+        }, 1000);
+    } else {
+        feedback.textContent = 'That\'s not her birthday... Try again! 💭';
+        feedback.className = 'quiz-feedback error';
+        shakeElement(document.querySelector('.secret-quiz-card'));
+    }
+}
+
+// Reaction Video - Pause/Resume Music
+function initReactionVideo() {
+    const video = document.getElementById('reaction-video');
+    const bgMusic = document.getElementById('bgMusic');
+    
+    if (!video || !bgMusic) return;
+    
+    let musicWasPlaying = false;
+    
+    video.addEventListener('play', () => {
+        if (!bgMusic.paused) {
+            musicWasPlaying = true;
+            bgMusic.pause();
+        }
+    });
+    
+    video.addEventListener('pause', () => {
+        if (musicWasPlaying) {
+            bgMusic.play();
+        }
+    });
+    
+    video.addEventListener('ended', () => {
+        if (musicWasPlaying) {
+            bgMusic.play();
+            musicWasPlaying = false;
+        }
+    });
+}
+
+// ============================================
 // Reset and Restart
 // ============================================
 function resetAndRestart() {

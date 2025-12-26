@@ -520,7 +520,7 @@
                     </div>
                     <div class="gift-story">
                         <p>
-                            This gift came from your business trip to <strong>Indonesia</strong> 🇮🇩 — 
+                            This gift came from your business trip to <strong>Indonesia</strong> — 
                             your first abroad trip! A result of all your effort and hard work 
                             through your journey. I'm so proud of you! 
                         </p>
@@ -672,7 +672,51 @@
                             </p>
                         </div>
                         <div class="letter-footer">
-                            <span>❄️</span><span>🎁</span><span>❄️</span>
+                            <span>❄️</span><span class="secret-gift-btn" id="secret-gift-btn" onclick="showSecretQuiz()">🎁</span><span>❄️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secret Quiz for Cát Tiên's Birthday -->
+                <div class="secret-quiz-container hidden" id="secret-quiz">
+                    <div class="secret-quiz-card">
+                        <div class="secret-quiz-header">
+                            <span class="secret-icon">🤫</span>
+                            <h4>Secret Surprise!</h4>
+                        </div>
+                        <div class="secret-quiz-question">
+                            <p class="secret-intro">Psst... wanna see Cát Tiên's reaction? 🥰✨</p>
+                            <p>Enter <strong>her birthday</strong> to unlock!</p>
+                        </div>
+                        
+                        <div class="date-picker-container">
+                            <input type="date" id="secret-date-picker" class="date-picker">
+                        </div>
+
+                        <button class="submit-quiz-btn" onclick="submitSecretQuiz()">
+                            Unlock! 🔓
+                        </button>
+
+                        <div class="quiz-feedback" id="secret-quiz-feedback"></div>
+                    </div>
+                </div>
+
+                <!-- Secret Reward: Video 16 -->
+                <div class="secret-reward hidden" id="secret-reward">
+                    <div class="reward-reveal" id="secret-reward-reveal">
+                        <div class="confetti-burst">🎉</div>
+                        <h4>You unlocked her reaction! 💕</h4>
+                    </div>
+                    
+                    <div class="reaction-video-container">
+                        <div class="reaction-garland">
+                            <div class="garland-corner tl">💖</div>
+                            <div class="garland-corner tr">✨</div>
+                            <div class="garland-corner bl">✨</div>
+                            <div class="garland-corner br">💖</div>
+                            <video id="reaction-video" controls class="reaction-video">
+                                <source src="image_asset/16.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
